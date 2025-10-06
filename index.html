@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+   <ul id="menu">
+        <li class="active" data-section="home"><a href="#">Home</a></li>
+        <li data-section="about"><a href="#">About</a></li>
+        <li data-section="skills"><a href="#">Skills</a></li>
+        <li data-section="projects"><a href="#">Projects</a></li>
+        <li data-section="certifications"><a href="#">Certifications</a></li>
+        <li data-section="contact"><a href="#">Contact</a></li>
+      </ul>
+      <button id="themeToggle">🌗 Toggle Theme</button>
+      <select id="theme">
+        <option value="default">Default</option>
+        <option value="dark">Dark Mode</option>
+        <option value="gradient">Gradient</option>
+        <option value="sunset">Sunset</option>
+      </select>
+    </nav>
+  </header>
+<main>
+  <!-- Home Section -->
+  <section id="home" class="page active" data-aos="fade-up">
+      <h1 id="typewriter"></h1>
+      <!-- <p>Welcome to your dynamic portfolio!</p> -->
+      <button id="startBtn">🚀 Start Building</button>
+    </section>
+
+
+  <!-- About Section -->
+ 
+ <section id="about" class="page">
+  <h2>About Me</h2>
+  <div id="about-content">
+    <img id="about-photo" src="" alt="Profile Photo">
+    <div id="about-text">
+      <p id="about-bio"></p>
+      <button id="edit-about-btn">Edit About</button>
+    </div>
+  </div>
+</section>
+  <!-- Skills Section -->
+  
+<section id="skills" class="page">
+  <h2 id="mySkills">My Skills</h2>
+
+  <!-- Input Section -->
+  <div id="editSkillsContainer" style="display:none;">
+    <input type="text" id="newSkillInput" placeholder="Enter a skill">
+    <button id="addSkillBtn">Add Skill</button>
+    <button id="saveSkillsBtn">Save Skills</button>
+    <button id="clearSkillsBtn" style="background-color: crimson; color: white;">Clear All Skills</button>
+  </div>
+
+  <!-- Skills Circle Container -->
+  <div id="skillsCircleContainer">
+    <div class="center-skill">Skills</div>
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+<section id="projects" class="page">
+  <h2>Projects</h2>
+  <div id="projects-container"></div>
+  <button id="add-project-btn">Add Project</button>
+  <button id="save-projects-btn">Save All Projects</button>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="page">
+  <h2>Certifications</h2>
+  <div id="certifications-container"></div>
+  <button id="add-cert-btn">Add Certification</button>
+  <button id="save-certs-btn">Save All Certifications</button>
+</section>
+
+
+  <!-- Contact Section -->
+   <!-- User Inputs for Social Links -->
+   
+<section id="contact" class="page contact">
+  <div class="contact-container">
+    
+    <!-- Left Box: Social Links -->
+    <div class="contact-box">
+      <h2>Connect with Me</h2>
+      <div class="user-inputs">
+        <input type="text" id="linkNameInput" placeholder="Link Name (e.g., LinkedIn, GitHub)">
+        <input type="text" id="linkURLInput" placeholder="Full URL">
+        <button id="addLink">Add Link</button>
+        <div id="userLinksList"></div>
+      </div>
+      <div class="social-icons" id="socialLinks"></div>
+    </div>
+
+    <!-- Right Box: Contact Form -->
+    <div class="contact-box">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <div class="popup" id="popupMessage">Message Sent Successfully!</div>
+        <div class="form-group">
+          <input type="text" name="name" placeholder=" " required>
+          <label>Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder=" " required>
+          <label>Your Email</label>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder=" " required></textarea>
+          <label>Your Message</label>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+</main>
+  
+
+  <!-- Modals -->
+  <div id="overlay" class="hidden">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+
+</body>
+</html>
